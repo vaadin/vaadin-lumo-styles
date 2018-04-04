@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Lumo Theme Alerts</title>
+
+  <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+  <link rel="import" href="common.html">
+
+  <link rel="import" href="../alert.html">
+
+  <style>
+    [unresolved] {
+      opacity: 0;
+    }
+  </style>
+  <custom-style>
+    <style include="lumo-alert"></style>
+  </custom-style>
+</head>
+
+<body unresolved>
+
+  <div class="vertical-section-container centered">
+
+    <demo-navigation>
+      <span slot="header">Lumo</span>
+    </demo-navigation>
+
+    <a href="https://github.com/vaadin/vaadin-lumo-styles/blob/master/alert.html" class="theme-source-code">Source code</a>
+    <h1>Alerts</h1>
+
+    <p>Import and include the alert style module:</p>
+    <nice-demo-snippet code-only>
+      <template slot="source">
+        <link rel="import" href="bower_components/vaadin-lumo-styles/alert.html">
+
+        <custom-style>
+          <style include="lumo-alert"></style>
+        </custom-style>
+      </template>
+    </nice-demo-snippet>
+
+    <h3 demo-section>Colors</h3>
+
+    <nice-demo-snippet>
+      <template slot="source">
+        <p theme="alert">Normal</p>
+        <p theme="alert success">Success</p>
+        <p theme="alert error">Error</p>
+        <p theme="alert contrast">Contrast</p>
+      </template>
+    </nice-demo-snippet>
+
+  </div>
+</body>
+</html>

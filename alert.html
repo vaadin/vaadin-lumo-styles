@@ -1,0 +1,35 @@
+<link rel="import" href="spacing.html">
+<link rel="import" href="color.html">
+<link rel="import" href="typography.html">
+
+<dom-module id="lumo-alert">
+  <template>
+    <style>
+      [theme~="alert"] {
+        padding: var(--lumo-space-m);
+        color: var(--lumo-primary-text-color);
+        background-color: var(--lumo-primary-color-10pct);
+        border-radius: var(--lumo-border-radius);
+        font-family: var(--lumo-font-family);
+        font-size: var(--lumo-font-size-m);
+      }
+
+      /* Colors */
+
+      [theme~="alert"][theme~="success"] {
+        color: var(--lumo-success-text-color);
+        background-color: var(--lumo-success-color-10pct);
+      }
+
+      [theme~="alert"][theme~="error"] {
+        color: var(--lumo-error-text-color);
+        background-color: var(--lumo-error-color-10pct);
+      }
+
+      [theme~="alert"][theme~="contrast"] {
+        color: var(--lumo-contrast-80pct);
+        background-color: var(--lumo-contrast-5pct);
+      }
+    </style>
+  </template>
+</dom-module>
