@@ -37,12 +37,15 @@
     "wct.conf.js"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0",
+    "polymer": "Polymer/polymer#5f5d2c2",
     "iron-icon": "polymerelements/iron-icon#^2.0.1",
     "iron-iconset-svg": "polymerelements/iron-iconset-svg#^2.1.0"
   },
   "devDependencies": {
     "elements-demo-resources": "vaadin/elements-demo-resources#new-menu-and-styles",
     "iron-ajax": "^2.1.0"
+  },
+  "resolutions": {
+    "polymer": "5f5d2c2"
   }
 }
