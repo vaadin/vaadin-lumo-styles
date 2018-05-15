@@ -169,10 +169,8 @@ gulp.task('icons', function() {
         .pipe(iconfont({
           fontName: 'lumo-icons',
           formats: ['woff'],
-          fontHeight: 1000,
-          ascent: 850,
-          descent: 150,
-          fixedWidth: true,
+          fontHeight: 2400,
+          descent: 400,
           normalize: true,
         }))
         .on('glyphs', function(glyphData, options) {
