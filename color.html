@@ -109,25 +109,8 @@ $tpl.innerHTML = `<custom-style><style>${colorBase.toString().replace(':host', '
 document.head.appendChild($tpl.content);
 
 Vaadin.LumoStyles.colorBase = colorBase;
-})();
-</script>
 
-MAGI ADD END -->
-
-<!-- MAGI ADD START
-<script>
-  /**
-   * @namespace Vaadin
-   */
-  window.Vaadin = window.Vaadin || {};
-
-  /**
-   * @namespace Vaadin.LumoStyles
-   */
-  window.Vaadin.LumoStyles = window.Vaadin.LumoStyles || {};
-
-  (function() {
-    const color = Vaadin.css`
+const color = Vaadin.css`
 MAGI ADD END -->
 
 <!-- MAGI REMOVE START -->
@@ -247,25 +230,8 @@ MAGI ADD END -->
 Vaadin.registerStyles('', color, {moduleId: 'lumo-color'});
 
 Vaadin.LumoStyles.color = color;
-})();
-</script>
-MAGI ADD END -->
 
-<!-- Only needed for IE11 when you want to use the dark palette inside the light palette -->
-<!-- MAGI ADD START
-<script>
-  /**
-   * @namespace Vaadin
-   */
-  window.Vaadin = window.Vaadin || {};
-
-  /**
-   * @namespace Vaadin.LumoStyles
-   */
-  window.Vaadin.LumoStyles = window.Vaadin.LumoStyles || {};
-
-  (function() {
-    const colorLegacy = Vaadin.css`
+const colorLegacy = Vaadin.css`
 MAGI ADD END -->
 
 <!-- MAGI REMOVE START -->
