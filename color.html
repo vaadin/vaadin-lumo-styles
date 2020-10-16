@@ -103,14 +103,14 @@ MAGI ADD END -->
 </custom-style>
 <!-- MAGI REMOVE END -->
 <!-- MAGI ADD START
-`;
-const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${colorBase.toString().replace(':host', 'html')}</style></custom-style>`;
-document.head.appendChild($tpl.content);
+    `;
+    const $tpl = document.createElement('template');
+    $tpl.innerHTML = `<custom-style><style>${colorBase.toString().replace(':host', 'html')}</style></custom-style>`;
+    document.head.appendChild($tpl.content);
 
-Vaadin.LumoStyles.colorBase = colorBase;
+    Vaadin.LumoStyles.colorBase = colorBase;
 
-const color = Vaadin.css`
+    const color = Vaadin.css`
 MAGI ADD END -->
 
 <!-- MAGI REMOVE START -->
@@ -226,12 +226,12 @@ MAGI ADD END -->
 </dom-module>
 <!-- MAGI REMOVE END -->
 <!-- MAGI ADD START
-`;
-Vaadin.registerStyles('', color, {moduleId: 'lumo-color'});
+    `;
+    Vaadin.registerStyles('', color, {moduleId: 'lumo-color'});
 
-Vaadin.LumoStyles.color = color;
+    Vaadin.LumoStyles.color = color;
 
-const colorLegacy = Vaadin.css`
+    const colorLegacy = Vaadin.css`
 MAGI ADD END -->
 
 <!-- MAGI REMOVE START -->
@@ -249,10 +249,10 @@ MAGI ADD END -->
 </dom-module>
 <!-- MAGI REMOVE END -->
 <!-- MAGI ADD START
-`;
-Vaadin.registerStyles('', colorLegacy, {moduleId: 'lumo-color-legacy', include: ['lumo-color']});
+    `;
+    Vaadin.registerStyles('', colorLegacy, {moduleId: 'lumo-color-legacy', include: ['lumo-color']});
 
-Vaadin.LumoStyles.colorLegacy = colorLegacy;
-})();
+    Vaadin.LumoStyles.colorLegacy = colorLegacy;
+  })();
 </script>
 MAGI ADD END -->

@@ -51,12 +51,12 @@ MAGI ADD END -->
 </custom-style>
 <!-- MAGI REMOVE END -->
 <!-- MAGI ADD START
-`;
-const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${spacing.toString().replace(':host', 'html')}</style></custom-style>`;
-document.head.appendChild($tpl.content);
+    `;
+    const $tpl = document.createElement('template');
+    $tpl.innerHTML = `<custom-style><style>${spacing.toString().replace(':host', 'html')}</style></custom-style>`;
+    document.head.appendChild($tpl.content);
 
-Vaadin.LumoStyles.spacing = spacing;
-})();
+    Vaadin.LumoStyles.spacing = spacing;
+  })();
 </script>
 MAGI ADD END -->
