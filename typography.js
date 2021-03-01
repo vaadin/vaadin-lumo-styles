@@ -1,33 +1,31 @@
-import './version.js';
 import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+import './version.js';
 
 const font = css`
-:host {
-  /* Font families */
-  --lumo-font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  :host {
+    /* prettier-ignore */
+    --lumo-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-  /* Font sizes */
-  --lumo-font-size-xxs: .75rem;
-  --lumo-font-size-xs: .8125rem;
-  --lumo-font-size-s: .875rem;
-  --lumo-font-size-m: 1rem;
-  --lumo-font-size-l: 1.125rem;
-  --lumo-font-size-xl: 1.375rem;
-  --lumo-font-size-xxl: 1.75rem;
-  --lumo-font-size-xxxl: 2.5rem;
+    /* Font sizes */
+    --lumo-font-size-xxs: 0.75rem;
+    --lumo-font-size-xs: 0.8125rem;
+    --lumo-font-size-s: 0.875rem;
+    --lumo-font-size-m: 1rem;
+    --lumo-font-size-l: 1.125rem;
+    --lumo-font-size-xl: 1.375rem;
+    --lumo-font-size-xxl: 1.75rem;
+    --lumo-font-size-xxxl: 2.5rem;
 
-  /* Line heights */
-  --lumo-line-height-xs: 1.25;
-  --lumo-line-height-s: 1.375;
-  --lumo-line-height-m: 1.625;
-}
+    /* Line heights */
+    --lumo-line-height-xs: 1.25;
+    --lumo-line-height-s: 1.375;
+    --lumo-line-height-m: 1.625;
+  }
 `;
 
 const $tpl = document.createElement('template');
 $tpl.innerHTML = `<style>${font.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
-
-export { font };
 
 const typography = css`
   html {
@@ -50,12 +48,12 @@ const typography = css`
   }
 
   small,
-  [theme~="font-size-s"] {
+  [theme~='font-size-s'] {
     font-size: var(--lumo-font-size-s);
     line-height: var(--lumo-line-height-s);
   }
 
-  [theme~="font-size-xs"] {
+  [theme~='font-size-xs'] {
     font-size: var(--lumo-font-size-xs);
     line-height: var(--lumo-line-height-xs);
   }
@@ -138,11 +136,12 @@ const typography = css`
 
   /* RTL specific styles */
 
-  blockquote[dir="rtl"] {
+  blockquote[dir='rtl'] {
     border-left: none;
     border-right: 2px solid var(--lumo-contrast-30pct);
   }
 `;
-registerStyles('', typography, {moduleId: 'lumo-typography'});
 
-export { typography };
+registerStyles('', typography, { moduleId: 'lumo-typography' });
+
+export { font, typography };

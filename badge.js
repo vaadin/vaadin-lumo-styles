@@ -1,9 +1,10 @@
+import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
 import './style.js';
 import './color.js';
 import './typography.js';
-import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const badge = css`
-  [theme~="badge"] {
+  [theme~='badge'] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -22,79 +23,79 @@ const badge = css`
   }
 
   /* Ensure proper vertical alignment */
-  [theme~="badge"]::before {
+  [theme~='badge']::before {
     display: inline-block;
-    content: "\\2003";
+    content: '\\2003';
     width: 0;
   }
 
-  [theme~="badge"][theme~="small"] {
+  [theme~='badge'][theme~='small'] {
     font-size: var(--lumo-font-size-xxs);
     line-height: 1;
   }
 
   /* Colors */
 
-  [theme~="badge"][theme~="success"] {
+  [theme~='badge'][theme~='success'] {
     color: var(--lumo-success-text-color);
     background-color: var(--lumo-success-color-10pct);
   }
 
-  [theme~="badge"][theme~="error"] {
+  [theme~='badge'][theme~='error'] {
     color: var(--lumo-error-text-color);
     background-color: var(--lumo-error-color-10pct);
   }
 
-  [theme~="badge"][theme~="contrast"] {
+  [theme~='badge'][theme~='contrast'] {
     color: var(--lumo-contrast-80pct);
     background-color: var(--lumo-contrast-5pct);
   }
 
   /* Primary */
 
-  [theme~="badge"][theme~="primary"] {
+  [theme~='badge'][theme~='primary'] {
     color: var(--lumo-primary-contrast-color);
     background-color: var(--lumo-primary-color);
   }
 
-  [theme~="badge"][theme~="success"][theme~="primary"] {
+  [theme~='badge'][theme~='success'][theme~='primary'] {
     color: var(--lumo-success-contrast-color);
     background-color: var(--lumo-success-color);
   }
 
-  [theme~="badge"][theme~="error"][theme~="primary"] {
+  [theme~='badge'][theme~='error'][theme~='primary'] {
     color: var(--lumo-error-contrast-color);
     background-color: var(--lumo-error-color);
   }
 
-  [theme~="badge"][theme~="contrast"][theme~="primary"] {
+  [theme~='badge'][theme~='contrast'][theme~='primary'] {
     color: var(--lumo-base-color);
     background-color: var(--lumo-contrast);
   }
 
   /* Links */
 
-  [theme~="badge"][href]:hover {
+  [theme~='badge'][href]:hover {
     text-decoration: none;
   }
 
   /* Icon */
 
-  [theme~="badge"] iron-icon {
+  [theme~='badge'] iron-icon {
     margin: -0.25em 0;
     --iron-icon-width: 1.5em;
     --iron-icon-height: 1.5em;
   }
 
-  [theme~="badge"] iron-icon:first-child {
+  [theme~='badge'] iron-icon:first-child {
     margin-left: -0.375em;
   }
 
-  [theme~="badge"] iron-icon:last-child {
+  [theme~='badge'] iron-icon:last-child {
     margin-right: -0.375em;
   }
 
-  [theme~="badge"][icon] {
+  [theme~='badge'][icon] {
     min-width: 0;
     padding: 0;
     font-size: 1rem;
@@ -102,14 +103,14 @@ const badge = css`
     --iron-icon-height: var(--lumo-icon-size-m);
   }
 
-  [theme~="badge"][icon][theme~="small"] {
+  [theme~='badge'][icon][theme~='small'] {
     --iron-icon-width: var(--lumo-icon-size-s);
     --iron-icon-height: var(--lumo-icon-size-s);
   }
 
   /* Empty */
 
-  [theme~="badge"]:not([icon]):empty {
+  [theme~='badge']:not([icon]):empty {
     min-width: 0;
     width: 1em;
     height: 1em;
@@ -118,41 +119,41 @@ const badge = css`
     background-color: var(--lumo-primary-color);
   }
 
-  [theme~="badge"][theme~="small"]:not([icon]):empty {
+  [theme~='badge'][theme~='small']:not([icon]):empty {
     width: 0.75em;
     height: 0.75em;
   }
 
-  [theme~="badge"][theme~="contrast"]:not([icon]):empty {
+  [theme~='badge'][theme~='contrast']:not([icon]):empty {
     background-color: var(--lumo-contrast);
   }
 
-  [theme~="badge"][theme~="success"]:not([icon]):empty {
+  [theme~='badge'][theme~='success']:not([icon]):empty {
     background-color: var(--lumo-success-color);
   }
 
-  [theme~="badge"][theme~="error"]:not([icon]):empty {
+  [theme~='badge'][theme~='error']:not([icon]):empty {
     background-color: var(--lumo-error-color);
   }
 
   /* Pill */
 
-  [theme~="badge"][theme~="pill"] {
+  [theme~='badge'][theme~='pill'] {
     --lumo-border-radius-s: 1em;
   }
 
   /* RTL specific styles */
 
-  [dir="rtl"][theme~="badge"] iron-icon:first-child {
+  [dir='rtl'][theme~='badge'] iron-icon:first-child {
     margin-right: -0.375em;
     margin-left: 0;
   }
 
-  [dir="rtl"][theme~="badge"] iron-icon:last-child {
+  [dir='rtl'][theme~='badge'] iron-icon:last-child {
     margin-left: -0.375em;
     margin-right: 0;
   }
 `;
-registerStyles('', badge, {moduleId: 'lumo-badge'});
+registerStyles('', badge, { moduleId: 'lumo-badge' });
 
 export { badge };

@@ -1,10 +1,11 @@
+import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
 import '../color.js';
 import '../spacing.js';
 import '../style.js';
 import '../typography.js';
-import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const requiredField = css`
-  [part="label"] {
+  [part='label'] {
     align-self: flex-start;
     color: var(--lumo-secondary-text-color);
     font-weight: 500;
@@ -29,12 +30,12 @@ const requiredField = css`
     padding-top: var(--lumo-space-m);
   }
 
-  :host([required]) [part="label"] {
+  :host([required]) [part='label'] {
     padding-right: 1em;
   }
 
-  [part="label"]::after {
-    content: var(--lumo-required-field-indicator, "•");
+  [part='label']::after {
+    content: var(--lumo-required-field-indicator, '•');
     transition: opacity 0.2s;
     opacity: 0;
     color: var(--lumo-primary-text-color);
@@ -44,15 +45,15 @@ const requiredField = css`
     text-align: center;
   }
 
-  :host([required]:not([has-value])) [part="label"]::after {
+  :host([required]:not([has-value])) [part='label']::after {
     opacity: 1;
   }
 
-  :host([invalid]) [part="label"]::after {
+  :host([invalid]) [part='label']::after {
     color: var(--lumo-error-text-color);
   }
 
-  [part="error-message"] {
+  [part='error-message'] {
     margin-left: calc(var(--lumo-border-radius-m) / 4);
     font-size: var(--lumo-font-size-xs);
     line-height: var(--lumo-line-height-xs);
@@ -63,40 +64,41 @@ const requiredField = css`
   }
 
   /* Margin that doesn’t reserve space when there’s no error message */
-  [part="error-message"]:not(:empty)::before,
-  [part="error-message"]:not(:empty)::after {
-    content: "";
+  [part='error-message']:not(:empty)::before,
+  [part='error-message']:not(:empty)::after {
+    content: '';
     display: block;
     height: 0.4em;
   }
 
-  :host(:not([invalid])) [part="error-message"] {
+  :host(:not([invalid])) [part='error-message'] {
     max-height: 0;
     overflow: hidden;
   }
 
   /* RTL specific styles */
 
-  :host([dir="rtl"]) [part="label"] {
+  :host([dir='rtl']) [part='label'] {
     margin-left: 0;
     margin-right: calc(var(--lumo-border-radius-m) / 4);
   }
 
-  :host([required][dir="rtl"]) [part="label"] {
+  :host([required][dir='rtl']) [part='label'] {
     padding-left: 1em;
     padding-right: 0;
   }
 
-  :host([dir="rtl"]) [part="label"]::after {
+  :host([dir='rtl']) [part='label']::after {
     right: auto;
     left: 0;
   }
 
-  :host([dir="rtl"]) [part="error-message"] {
+  :host([dir='rtl']) [part='error-message'] {
     margin-left: 0;
     margin-right: calc(var(--lumo-border-radius-m) / 4);
   }
 `;
-registerStyles('', requiredField, {moduleId: 'lumo-required-field'});
+
+registerStyles('', requiredField, { moduleId: 'lumo-required-field' });
 
 export { requiredField };

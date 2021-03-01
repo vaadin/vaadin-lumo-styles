@@ -1,25 +1,19 @@
-/* Split as a separate module because combo box can only use the "fullscreen" styles */
-/*
-  FIXME(polymer-modulizer): the above comments were extracted
-  from HTML and may be out of place here. Review them and
-  then delete this comment!
-*/
+import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
 import '../spacing.js';
-
 import '../style.js';
 import './overlay.js';
-import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const menuOverlayCore = css`
   :host([opening]),
   :host([closing]) {
     animation: 0.14s lumo-overlay-dummy-animation;
   }
 
-  [part="overlay"] {
+  [part='overlay'] {
     will-change: opacity, transform;
   }
 
-  :host([opening]) [part="overlay"] {
+  :host([opening]) [part='overlay'] {
     animation: 0.1s lumo-menu-overlay-enter ease-out both;
   }
 
@@ -30,7 +24,7 @@ const menuOverlayCore = css`
     }
   }
 
-  :host([closing]) [part="overlay"] {
+  :host([closing]) [part='overlay'] {
     animation: 0.1s lumo-menu-overlay-exit both;
   }
 
@@ -40,9 +34,8 @@ const menuOverlayCore = css`
     }
   }
 `;
-registerStyles('', menuOverlayCore, {moduleId: 'lumo-menu-overlay-core'});
 
-export { menuOverlayCore };
+registerStyles('', menuOverlayCore, { moduleId: 'lumo-menu-overlay-core' });
 
 const menuOverlay = css`
   /* Small viewport (bottom sheet) styles */
@@ -57,7 +50,7 @@ const menuOverlay = css`
       justify-content: flex-end !important;
     }
 
-    [part="overlay"] {
+    [part='overlay'] {
       max-height: 50vh;
       width: 100vw;
       border-radius: 0;
@@ -65,7 +58,7 @@ const menuOverlay = css`
     }
 
     /* The content part scrolls instead of the overlay part, because of the gradient fade-out */
-    [part="content"] {
+    [part='content'] {
       padding: 30px var(--lumo-space-m);
       max-height: inherit;
       box-sizing: border-box;
@@ -75,23 +68,23 @@ const menuOverlay = css`
       mask-image: linear-gradient(transparent, #000 40px, #000 calc(100% - 40px), transparent);
     }
 
-    [part="backdrop"] {
+    [part='backdrop'] {
       display: block;
     }
 
     /* Animations */
 
-    :host([opening]) [part="overlay"] {
-      animation: 0.2s lumo-mobile-menu-overlay-enter cubic-bezier(.215, .61, .355, 1) both;
+    :host([opening]) [part='overlay'] {
+      animation: 0.2s lumo-mobile-menu-overlay-enter cubic-bezier(0.215, 0.61, 0.355, 1) both;
     }
 
     :host([closing]),
-    :host([closing]) [part="backdrop"] {
+    :host([closing]) [part='backdrop'] {
       animation-delay: 0.14s;
     }
 
-    :host([closing]) [part="overlay"] {
-      animation: 0.14s 0.14s lumo-mobile-menu-overlay-exit cubic-bezier(.55, .055, .675, .19) both;
+    :host([closing]) [part='overlay'] {
+      animation: 0.14s 0.14s lumo-mobile-menu-overlay-exit cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
     }
   }
 
@@ -107,6 +100,6 @@ const menuOverlay = css`
     }
   }
 `;
-registerStyles('', menuOverlay, {moduleId: 'lumo-menu-overlay', include: ['lumo-overlay', 'lumo-menu-overlay-core']});
+registerStyles('', menuOverlay, { moduleId: 'lumo-menu-overlay', include: ['lumo-overlay', 'lumo-menu-overlay-core'] });
 
-export { menuOverlay };
+export { menuOverlayCore, menuOverlay };

@@ -1,8 +1,9 @@
+import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
 import '../color.js';
 import '../spacing.js';
 import '../style.js';
 import '../typography.js';
-import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const overlay = css`
   :host {
     top: var(--lumo-space-m);
@@ -14,7 +15,7 @@ const overlay = css`
     outline: 0px solid transparent;
   }
 
-  [part="overlay"] {
+  [part='overlay'] {
     background-color: var(--lumo-base-color);
     background-image: linear-gradient(var(--lumo-tint-5pct), var(--lumo-tint-5pct));
     border-radius: var(--lumo-border-radius-m);
@@ -31,11 +32,11 @@ const overlay = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  [part="content"] {
+  [part='content'] {
     padding: var(--lumo-space-xs);
   }
 
-  [part="backdrop"] {
+  [part='backdrop'] {
     background-color: var(--lumo-shade-20pct);
     animation: 0.2s lumo-overlay-backdrop-enter both;
     will-change: opacity;
@@ -47,7 +48,7 @@ const overlay = css`
     }
   }
 
-  :host([closing]) [part="backdrop"] {
+  :host([closing]) [part='backdrop'] {
     animation: 0.2s lumo-overlay-backdrop-exit both;
   }
 
@@ -58,10 +59,15 @@ const overlay = css`
   }
 
   @keyframes lumo-overlay-dummy-animation {
-    0% { opacity: 1; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 `;
-registerStyles('', overlay, {moduleId: 'lumo-overlay'});
+registerStyles('', overlay, { moduleId: 'lumo-overlay' });
 
 export { overlay };

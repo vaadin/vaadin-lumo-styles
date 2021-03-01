@@ -1,10 +1,11 @@
+import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
 import '../color.js';
 import '../font-icons.js';
 import '../sizing.js';
 import '../style.js';
-import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const fieldButton = css`
-  [part$="button"] {
+  [part$='button'] {
     flex: none;
     width: 1em;
     height: 1em;
@@ -16,20 +17,20 @@ const fieldButton = css`
     cursor: var(--lumo-clickable-cursor);
   }
 
-  :host(:not([readonly])) [part$="button"]:hover {
+  :host(:not([readonly])) [part$='button']:hover {
     color: var(--lumo-contrast-90pct);
   }
 
-  :host([disabled]) [part$="button"],
-  :host([readonly]) [part$="button"] {
+  :host([disabled]) [part$='button'],
+  :host([readonly]) [part$='button'] {
     color: var(--lumo-contrast-20pct);
   }
 
-  [part$="button"]::before {
-    font-family: "lumo-icons";
+  [part$='button']::before {
+    font-family: 'lumo-icons';
     display: block;
   }
 `;
-registerStyles('', fieldButton, {moduleId: 'lumo-field-button'});
+registerStyles('', fieldButton, { moduleId: 'lumo-field-button' });
 
 export { fieldButton };

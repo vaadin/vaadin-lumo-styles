@@ -1,5 +1,6 @@
-import './version.js';
 import '@polymer/iron-iconset-svg/iron-iconset-svg.js';
+import './version.js';
+
 const $_documentContainer = document.createElement('template');
 
 $_documentContainer.innerHTML = `<iron-iconset-svg size="1000" name="lumo">
@@ -49,11 +50,3 @@ $_documentContainer.innerHTML = `<iron-iconset-svg size="1000" name="lumo">
 </iron-iconset-svg>`;
 
 document.head.appendChild($_documentContainer.content);
-
-/* NOTICE: Generated with 'gulp icons' */
-/*
-  FIXME(polymer-modulizer): the above comments were extracted
-  from HTML and may be out of place here. Review them and
-  then delete this comment!
-*/
-;
