@@ -1,5 +1,5 @@
 <!doctype html>
-<script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+<script src="../../../@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
 <link rel="import" href="../bower_components/vaadin-date-picker/vaadin-date-picker.html">
 <link rel="import" href="../bower_components/vaadin-combo-box/vaadin-combo-box.html">
@@ -12,10 +12,21 @@
 <link rel="import" href="../vaadin-combo-box.html">
 <link rel="import" href="../vaadin-date-picker.html">
 <link rel="import" href="../vaadin-checkbox.html">
-<link rel="import" href="../icons.html">
+<script type="module" src="../icons.js"></script>
 
 
-<custom-style>
+<!-- FIXME(polymer-modulizer):
+        These imperative modules that innerHTML your HTML are
+        a hacky way to be sure that any mixins in included style
+        modules are ready before any elements that reference them are
+        instantiated, otherwise the CSS @apply mixin polyfill won't be
+        able to expand the underlying CSS custom properties.
+        See: https://github.com/Polymer/polymer-modulizer/issues/154
+        -->
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<custom-style>
   <style include="lumo-typography lumo-color">
     body {
       margin: 4em 2em;
@@ -26,12 +37,26 @@
       outline: 1px dashed;
     }
   </style>
-</custom-style>
+</custom-style>`;
 
-<h1>Labels</h1>
+document.body.appendChild($_documentContainer.content);
+</script>
 
-<h2>Without field labels</h2>
-<div class="container">
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h1>Labels</h1>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>Without field labels</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
   <vaadin-text-field placeholder="Placeholder"></vaadin-text-field>
   <vaadin-combo-box placeholder="Placeholder"></vaadin-combo-box>
@@ -42,11 +67,21 @@
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
 
 
-<h2>All fields have a label</h2>
-<div class="container">
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>All fields have a label</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
   <vaadin-text-field label="Label" placeholder="Placeholder"></vaadin-text-field>
   <vaadin-combo-box label="Label" placeholder="Placeholder"></vaadin-combo-box>
@@ -57,10 +92,20 @@
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
 
-<h2>All fields have a label, except text field</h2>
-<div class="container">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>All fields have a label, except text field</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
   <vaadin-text-field placeholder="Placeholder"></vaadin-text-field>
   <vaadin-combo-box label="Label" placeholder="Placeholder"></vaadin-combo-box>
@@ -71,11 +116,21 @@
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
 
 
-<h2>All fields have a label, except combo box</h2>
-<div class="container">
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>All fields have a label, except combo box</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
   <vaadin-text-field label="Label" placeholder="Placeholder"></vaadin-text-field>
   <vaadin-combo-box placeholder="Placeholder"></vaadin-combo-box>
@@ -86,10 +141,20 @@
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
 
-<h2>All fields have a label, except date picker</h2>
-<div class="container">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>All fields have a label, except date picker</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
   <vaadin-text-field label="Label" placeholder="Placeholder"></vaadin-text-field>
   <vaadin-combo-box label="Label" placeholder="Placeholder"></vaadin-combo-box>
@@ -100,75 +165,129 @@
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
 
 
 
 
 
-<h1>Error messages</h1>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h1>Error messages</h1>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-<h2>All fields have error messages, no label</h2>
-<div class="container">
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>All fields have error messages, no label</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
-  <vaadin-text-field error-message="Error message" invalid placeholder="Placeholder"></vaadin-text-field>
-  <vaadin-combo-box error-message="Error message" invalid placeholder="Placeholder"></vaadin-combo-box>
-  <vaadin-date-picker error-message="Error message" invalid placeholder="Placeholder"></vaadin-date-picker>
+  <vaadin-text-field error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-text-field>
+  <vaadin-combo-box error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-combo-box>
+  <vaadin-date-picker error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-date-picker>
   <vaadin-button>Button</vaadin-button>
   <vaadin-button>
     <iron-icon icon="lumo:edit"></iron-icon>
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
 
-<h2>All fields have error messages and labels</h2>
-<div class="container">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>All fields have error messages and labels</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
-  <vaadin-text-field label="Label" error-message="Error message" invalid placeholder="Placeholder"></vaadin-text-field>
-  <vaadin-combo-box label="Label" error-message="Error message" invalid placeholder="Placeholder"></vaadin-combo-box>
-  <vaadin-date-picker label="Label" error-message="Error message" invalid placeholder="Placeholder"></vaadin-date-picker>
+  <vaadin-text-field label="Label" error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-text-field>
+  <vaadin-combo-box label="Label" error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-combo-box>
+  <vaadin-date-picker label="Label" error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-date-picker>
   <vaadin-button>Button</vaadin-button>
   <vaadin-button>
     <iron-icon icon="lumo:edit"></iron-icon>
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
 
-<h2>All fields have error messages and labels, except text field</h2>
-<div class="container">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>All fields have error messages and labels, except text field</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
   <vaadin-text-field placeholder="Placeholder"></vaadin-text-field>
-  <vaadin-combo-box label="Label" error-message="Error message" invalid placeholder="Placeholder"></vaadin-combo-box>
-  <vaadin-date-picker label="Label" error-message="Error message" invalid placeholder="Placeholder"></vaadin-date-picker>
+  <vaadin-combo-box label="Label" error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-combo-box>
+  <vaadin-date-picker label="Label" error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-date-picker>
   <vaadin-button>Button</vaadin-button>
   <vaadin-button>
     <iron-icon icon="lumo:edit"></iron-icon>
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
 
-<h2>All fields have error messages and labels, except combo box</h2>
-<div class="container">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>All fields have error messages and labels, except combo box</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
-  <vaadin-text-field label="Label" error-message="Error message" invalid placeholder="Placeholder"></vaadin-text-field>
+  <vaadin-text-field label="Label" error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-text-field>
   <vaadin-combo-box placeholder="Placeholder"></vaadin-combo-box>
-  <vaadin-date-picker label="Label" error-message="Error message" invalid placeholder="Placeholder"></vaadin-date-picker>
+  <vaadin-date-picker label="Label" error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-date-picker>
   <vaadin-button>Button</vaadin-button>
   <vaadin-button>
     <iron-icon icon="lumo:edit"></iron-icon>
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
 
-<h2>All fields have error messages and labels, except date picker</h2>
-<div class="container">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>All fields have error messages and labels, except date picker</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container">
   Plain text
-  <vaadin-text-field label="Label" error-message="Error message" invalid placeholder="Placeholder"></vaadin-text-field>
-  <vaadin-combo-box label="Label" error-message="Error message" invalid placeholder="Placeholder"></vaadin-combo-box>
+  <vaadin-text-field label="Label" error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-text-field>
+  <vaadin-combo-box label="Label" error-message="Error message" invalid="" placeholder="Placeholder"></vaadin-combo-box>
   <vaadin-date-picker placeholder="Placeholder"></vaadin-date-picker>
   <vaadin-button>Button</vaadin-button>
   <vaadin-button>
@@ -176,22 +295,42 @@
     <span>Icon prefix</span>
   </vaadin-button>
   <vaadin-checkbox>Checkbox</vaadin-checkbox>
-</div>
+</div>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
 
 
 
-<h2>Small components, no label</h2>
-<div class="container" style="font-size: var(--lumo-font-size-s);">
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>Small components, no label</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container" style="font-size: var(--lumo-font-size-s);">
   Plain text
   <vaadin-text-field theme="small" placeholder="Placeholder"></vaadin-text-field>
   <!-- <vaadin-combo-box theme="small" placeholder="Placeholder"></vaadin-combo-box>
   <vaadin-date-picker theme="small" placeholder="Placeholder"></vaadin-date-picker> -->
   <vaadin-button theme="small">Button</vaadin-button>
   <!-- <vaadin-checkbox theme="small">Checkbox</vaadin-checkbox> -->
-</div>
+</div>`;
 
-<h2>Small components</h2>
-<div class="container" style="font-size: var(--lumo-font-size-s);">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>Small components</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container" style="font-size: var(--lumo-font-size-s);">
   Plain text
   <vaadin-text-field theme="small" placeholder="Placeholder"></vaadin-text-field>
   <vaadin-text-field theme="small" label="Label" placeholder="Placeholder"></vaadin-text-field>
@@ -199,14 +338,27 @@
   <vaadin-date-picker theme="small" label="Label" placeholder="Placeholder"></vaadin-date-picker> -->
   <vaadin-button theme="small">Button</vaadin-button>
   <!-- <vaadin-checkbox theme="small">Checkbox</vaadin-checkbox> -->
-</div>
+</div>`;
 
-<h2>Small components</h2>
-<div class="container" style="font-size: var(--lumo-font-size-s);">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+<script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>Small components</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+<script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="container" style="font-size: var(--lumo-font-size-s);">
   Plain text
-  <vaadin-text-field theme="small" label="Label" error-message="Error message" invalid required placeholder="Placeholder"></vaadin-text-field>
+  <vaadin-text-field theme="small" label="Label" error-message="Error message" invalid="" required="" placeholder="Placeholder"></vaadin-text-field>
   <!-- <vaadin-combo-box theme="small" label="Label" placeholder="Placeholder"></vaadin-combo-box>
   <vaadin-date-picker theme="small" label="Label" placeholder="Placeholder"></vaadin-date-picker> -->
   <vaadin-button theme="small">Button</vaadin-button>
   <!-- <vaadin-checkbox theme="small">Checkbox</vaadin-checkbox> -->
-</div>
+</div>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>

@@ -1,8 +1,8 @@
-<!-- NOTICE: Generated with 'gulp icons' -->
-<link rel="import" href="../polymer/lib/elements/custom-style.html">
-<link rel="import" href="version.html">
+import '@polymer/polymer/lib/elements/custom-style.js';
+import './version.js';
+const $_documentContainer = document.createElement('template');
 
-<custom-style>
+$_documentContainer.innerHTML = `<custom-style>
   <style>
     @font-face {
       font-family: 'lumo-icons';
@@ -12,48 +12,58 @@
     }
 
     html {
-      --lumo-icons-align-center: "\ea01";
-      --lumo-icons-align-left: "\ea02";
-      --lumo-icons-align-right: "\ea03";
-      --lumo-icons-angle-down: "\ea04";
-      --lumo-icons-angle-left: "\ea05";
-      --lumo-icons-angle-right: "\ea06";
-      --lumo-icons-angle-up: "\ea07";
-      --lumo-icons-arrow-down: "\ea08";
-      --lumo-icons-arrow-left: "\ea09";
-      --lumo-icons-arrow-right: "\ea0a";
-      --lumo-icons-arrow-up: "\ea0b";
-      --lumo-icons-bar-chart: "\ea0c";
-      --lumo-icons-bell: "\ea0d";
-      --lumo-icons-calendar: "\ea0e";
-      --lumo-icons-checkmark: "\ea0f";
-      --lumo-icons-chevron-down: "\ea10";
-      --lumo-icons-chevron-left: "\ea11";
-      --lumo-icons-chevron-right: "\ea12";
-      --lumo-icons-chevron-up: "\ea13";
-      --lumo-icons-clock: "\ea14";
-      --lumo-icons-cog: "\ea15";
-      --lumo-icons-cross: "\ea16";
-      --lumo-icons-download: "\ea17";
-      --lumo-icons-dropdown: "\ea18";
-      --lumo-icons-edit: "\ea19";
-      --lumo-icons-error: "\ea1a";
-      --lumo-icons-eye: "\ea1b";
-      --lumo-icons-eye-disabled: "\ea1c";
-      --lumo-icons-menu: "\ea1d";
-      --lumo-icons-minus: "\ea1e";
-      --lumo-icons-ordered-list: "\ea1f";
-      --lumo-icons-phone: "\ea20";
-      --lumo-icons-photo: "\ea21";
-      --lumo-icons-play: "\ea22";
-      --lumo-icons-plus: "\ea23";
-      --lumo-icons-redo: "\ea24";
-      --lumo-icons-reload: "\ea25";
-      --lumo-icons-search: "\ea26";
-      --lumo-icons-undo: "\ea27";
-      --lumo-icons-unordered-list: "\ea28";
-      --lumo-icons-upload: "\ea29";
-      --lumo-icons-user: "\ea2a";
+      --lumo-icons-align-center: "\\ea01";
+      --lumo-icons-align-left: "\\ea02";
+      --lumo-icons-align-right: "\\ea03";
+      --lumo-icons-angle-down: "\\ea04";
+      --lumo-icons-angle-left: "\\ea05";
+      --lumo-icons-angle-right: "\\ea06";
+      --lumo-icons-angle-up: "\\ea07";
+      --lumo-icons-arrow-down: "\\ea08";
+      --lumo-icons-arrow-left: "\\ea09";
+      --lumo-icons-arrow-right: "\\ea0a";
+      --lumo-icons-arrow-up: "\\ea0b";
+      --lumo-icons-bar-chart: "\\ea0c";
+      --lumo-icons-bell: "\\ea0d";
+      --lumo-icons-calendar: "\\ea0e";
+      --lumo-icons-checkmark: "\\ea0f";
+      --lumo-icons-chevron-down: "\\ea10";
+      --lumo-icons-chevron-left: "\\ea11";
+      --lumo-icons-chevron-right: "\\ea12";
+      --lumo-icons-chevron-up: "\\ea13";
+      --lumo-icons-clock: "\\ea14";
+      --lumo-icons-cog: "\\ea15";
+      --lumo-icons-cross: "\\ea16";
+      --lumo-icons-download: "\\ea17";
+      --lumo-icons-dropdown: "\\ea18";
+      --lumo-icons-edit: "\\ea19";
+      --lumo-icons-error: "\\ea1a";
+      --lumo-icons-eye: "\\ea1b";
+      --lumo-icons-eye-disabled: "\\ea1c";
+      --lumo-icons-menu: "\\ea1d";
+      --lumo-icons-minus: "\\ea1e";
+      --lumo-icons-ordered-list: "\\ea1f";
+      --lumo-icons-phone: "\\ea20";
+      --lumo-icons-photo: "\\ea21";
+      --lumo-icons-play: "\\ea22";
+      --lumo-icons-plus: "\\ea23";
+      --lumo-icons-redo: "\\ea24";
+      --lumo-icons-reload: "\\ea25";
+      --lumo-icons-search: "\\ea26";
+      --lumo-icons-undo: "\\ea27";
+      --lumo-icons-unordered-list: "\\ea28";
+      --lumo-icons-upload: "\\ea29";
+      --lumo-icons-user: "\\ea2a";
     }
   </style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);
+
+/* NOTICE: Generated with 'gulp icons' */
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+;

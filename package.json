@@ -1,9 +1,5 @@
 {
-  "name": "@vaadin/vaadin-lumo-styles",
-  "version": "1.7.0-alpha2",
   "description": "Lumo is a design system foundation for modern web applications, used by Vaadin components",
-  "main": "all-imports.html",
-  "repository": "vaadin/vaadin-lumo-styles",
   "keywords": [
     "vaadin",
     "lumo",
@@ -12,12 +8,16 @@
     "web-component",
     "polymer"
   ],
+  "repository": "vaadin/vaadin-lumo-styles",
+  "homepage": "https://vaadin.com/components",
+  "name": "@vaadin/vaadin-lumo-styles",
+  "version": "1.7.0-alpha2",
+  "main": "all-imports.js",
   "author": "Vaadin Ltd",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/vaadin/vaadin-lumo-styles/issues"
   },
-  "homepage": "https://vaadin.com/components",
   "files": [
     "*.js",
     "*.d.ts",
@@ -26,16 +26,24 @@
     "presets/*.js",
     "!wdio.conf.js"
   ],
-  "scripts": {
-    "test": "wct",
-    "prestart": "polymer analyze vaadin-* > analysis.json",
-    "start": "polymer serve --port 3000 --open",
-    "preversion": "gulp version:update"
+  "resolutions": {
+    "es-abstract": "1.17.6",
+    "@types/doctrine": "0.0.3",
+    "inherits": "2.0.3",
+    "samsam": "1.1.3",
+    "supports-color": "3.1.2",
+    "type-detect": "1.0.0"
   },
-  "devDependencies": {
-    "@vaadin/vaadin-component-dev-dependencies": "^2.0.0",
-    "gulp-iconfont": "^10.0.3",
-    "gulp-sort": "^2.0.0",
-    "gulp-svgmin": "^1.2.4"
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0",
+    "@polymer/iron-icon": "^3.0.0",
+    "@polymer/iron-iconset-svg": "^3.0.0",
+    "@vaadin/vaadin-themable-mixin": "^1.6.1"
+  },
+  "scripts": {
+  "generate-typings": "gen-typescript-declarations --outDir . --verify"
+},
+"devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0"
   }
 }
