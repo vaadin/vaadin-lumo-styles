@@ -30,7 +30,7 @@ $_documentContainer.innerHTML = `
       --lumo-space-xs: 0.1875rem;
     }
 
-    /* Need to use a separete and stronger selector for other browsers where
+    /* Need to use a separate and stronger selector for other browsers where
     the imports added later would otherwise override the property values */
     html:not(div) {
       --lumo-size-xl: 3rem;
