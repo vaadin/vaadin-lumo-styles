@@ -1,6 +1,6 @@
 import './version.js';
-import '@polymer/polymer/lib/elements/custom-style.js';
 import { css } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const sizing = css`
 :host {
   --lumo-size-xs: 1.625rem;
@@ -18,7 +18,7 @@ const sizing = css`
 }
 `;
 const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${sizing.toString().replace(':host', 'html')}</style></custom-style>`;
+$tpl.innerHTML = `<style>${sizing.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
 
 export { sizing };

@@ -1,8 +1,7 @@
-import '@polymer/polymer/lib/elements/custom-style.js';
 import './version.js';
 const $_documentContainer = document.createElement('template');
 
-$_documentContainer.innerHTML = `<custom-style>
+$_documentContainer.innerHTML = `
   <style>
     @font-face {
       font-family: 'lumo-icons';
@@ -56,14 +55,6 @@ $_documentContainer.innerHTML = `<custom-style>
       --lumo-icons-user: "\\ea2a";
     }
   </style>
-</custom-style>`;
+`;
 
 document.head.appendChild($_documentContainer.content);
-
-/* NOTICE: Generated with 'gulp icons' */
-/*
-  FIXME(polymer-modulizer): the above comments were extracted
-  from HTML and may be out of place here. Review them and
-  then delete this comment!
-*/
-;

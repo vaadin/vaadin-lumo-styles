@@ -1,6 +1,6 @@
 import './version.js';
-import '@polymer/polymer/lib/elements/custom-style.js';
 import { css } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const style = css`
 :host {
   /* Border radius */
@@ -21,7 +21,7 @@ const style = css`
 }
 `;
 const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${style.toString().replace(':host', 'html')}</style></custom-style>`;
+$tpl.innerHTML = `<style>${style.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
 
 export { style };

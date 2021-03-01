@@ -1,6 +1,6 @@
 import './version.js';
-import '@polymer/polymer/lib/elements/custom-style.js';
 import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const colorBase = css`
 :host {
   /* Base (background) */
@@ -74,8 +74,9 @@ const colorBase = css`
   --lumo-success-contrast-color: #FFF;
 }
 `;
+
 const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${colorBase.toString().replace(':host', 'html')}</style></custom-style>`;
+$tpl.innerHTML = `<style>${colorBase.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
 
 export { colorBase };

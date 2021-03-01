@@ -1,6 +1,6 @@
 import './version.js';
-import '@polymer/polymer/lib/elements/custom-style.js';
 import { css } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const spacing = css`
 :host {
   /* Square */
@@ -25,8 +25,9 @@ const spacing = css`
   --lumo-space-tall-xl: var(--lumo-space-xl) calc(var(--lumo-space-xl) / 2);
 }
 `;
+
 const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${spacing.toString().replace(':host', 'html')}</style></custom-style>`;
+$tpl.innerHTML = `<style>${spacing.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
 
 export { spacing };

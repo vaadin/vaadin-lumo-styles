@@ -1,9 +1,8 @@
 import '../sizing.js';
 import '../spacing.js';
-import '@polymer/polymer/lib/elements/custom-style.js';
 const $_documentContainer = document.createElement('template');
 
-$_documentContainer.innerHTML = `<custom-style>
+$_documentContainer.innerHTML = `
   <style>
     /* Browsers that fall back to the polyfill require plain html selector */
     html {
@@ -58,6 +57,6 @@ $_documentContainer.innerHTML = `<custom-style>
       --lumo-space-xs: 0.1875rem;
     }
   </style>
-</custom-style>`;
+`;
 
 document.head.appendChild($_documentContainer.content);

@@ -1,6 +1,6 @@
 import './version.js';
-import '@polymer/polymer/lib/elements/custom-style.js';
 import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const font = css`
 :host {
   /* Font families */
@@ -22,8 +22,9 @@ const font = css`
   --lumo-line-height-m: 1.625;
 }
 `;
+
 const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${font.toString().replace(':host', 'html')}</style></custom-style>`;
+$tpl.innerHTML = `<style>${font.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
 
 export { font };
