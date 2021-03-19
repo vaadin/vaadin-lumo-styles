@@ -5,6 +5,12 @@
 
 # Lumo
 
+> ⚠️ 　Starting from Vaadin 20, this project has migrated to [`vaadin-web-components`](https://github.com/vaadin/vaadin-web-components/tree/master/packages/vaadin-lumo-styles) *monorepository*.
+>
+> This repository is used for Vaadin 14 LTS and Vaadin 19.
+
+---
+
 > Lumo – ✨ enchantment (Finnish) and 🔆 light (Esperanto)
 
 **Lumo is a design system foundation** for modern, beautiful and accessible web applications.
@@ -12,7 +18,6 @@
 Lumo contains foundational styles – typography, colors, visual style, sizing & spacing and icons – that components and applications can use to achieve a consistent visual design.
 
 The implementation of Lumo is based on CSS custom properties, and [Polymer style modules](https://www.polymer-project.org/2.0/docs/devguide/style-shadow-dom#style-modules). Note, that you don’t need to use Polymer to build your application in order to use Lumo.
-
 
 ## Documentation
 
