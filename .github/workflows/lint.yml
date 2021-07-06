@@ -1,0 +1,35 @@
+name: Lint
+
+# all pull requests
+on: pull_request
+
+jobs:
+  lint:
+    name: JS, HTML and CSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node 12.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+
+      - name: Check out the source code
+        uses: actions/checkout@v2
+
+      - name: Install global npm dependencies
+        # bower is needed to run 'bower install'
+        # polymer-cli is needed to run the lint step
+        # web-component-tester is needed to run the test step
+        run: "npm install --quiet --no-progress --global bower gulp"
+
+      - name: Install project npm dependencies
+        run: "npm install --quiet --no-progress"
+
+      - name: Install project Bower dependencies
+        run: "bower install --quiet"
+
+      - name: Run a linter
+        run: "gulp lint"
+
+      - name: Run a version check
+        run: "gulp version:check"
