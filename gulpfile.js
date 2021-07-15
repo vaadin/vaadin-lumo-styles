@@ -95,7 +95,6 @@ gulp.task('version:update', async function() {
 /* Generate icon formats (font icons and iron-iconset-svg) from source SVGs */
 
 var iconfont = require('gulp-iconfont');
-var exec = require('child_process').exec;
 var fs = require('fs');
 var svgpath = require('svgpath');
 var svgmin = require('gulp-svgmin');
