@@ -14,6 +14,7 @@
         margin-left: calc(var(--lumo-border-radius-m) / 4);
         transition: color 0.2s;
         line-height: 1;
+        padding-right: 1em;
         padding-bottom: 0.5em;
         overflow: hidden;
         white-space: nowrap;
@@ -29,10 +30,6 @@
 
       :host([has-label]) {
         padding-top: var(--lumo-space-m);
-      }
-
-      :host([required]) [part="label"] {
-        padding-right: 1em;
       }
 
       [part="label"]::after {
